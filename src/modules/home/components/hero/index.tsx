@@ -16,7 +16,7 @@ const Hero = () => {
         <UnderlineLink href="/store">Explore products</UnderlineLink>
       </div>
       <Image
-        src='https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyeXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'
+        src="/newHero.jpg"
         loading="eager"
         priority={true}
         quality={90}
