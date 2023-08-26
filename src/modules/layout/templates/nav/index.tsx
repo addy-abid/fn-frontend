@@ -49,7 +49,7 @@ const Nav = () => {
     >
       <header
         className={clsx(
-          "relative h-16 px-8 mx-auto transition-colors bg-slate-50	 border-b border-transparent duration-200 group-hover:bg-white group-hover:border-gray-200",
+          "relative h-16 px-8 mx-auto transition-colors bg-transparent border-b border-transparent duration-200 group-hover:bg-white group-hover:border-gray-200",
           {
             "!bg-white !border-gray-200": !isHome || isScrolled,
           }
@@ -74,25 +74,14 @@ const Nav = () => {
 
           <div className="flex items-center h-full">
             <Link href="/" className="text-xl-semi uppercase">
-            <Image
-              src="/fnLogo.png" 
-             alt="logo"
-            width={300}
-            height={300}
-            
-            sizes="100vw"
-            style={{
-              objectFit: "cover",
-            }}
-            />
-
+              Acme
             </Link>
           </div>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               {process.env.FEATURE_SEARCH_ENABLED && <DesktopSearchModal />}
-              {/* <Link href="/account">Account</Link> */}
+              <Link href="/account">Account</Link>
             </div>
             <CartDropdown />
           </div>
