@@ -9,7 +9,6 @@ function withStoreConfig(nextConfig = {}) {
       nextConfig.env[`FEATURE_${key.toUpperCase()}_ENABLED`] = true
     }
   })
-
   return nextConfig
 }
 
