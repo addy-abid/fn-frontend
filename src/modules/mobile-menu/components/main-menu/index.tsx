@@ -7,7 +7,7 @@ import X from "@modules/common/icons/x"
 import { useCollections, useMeCustomer } from "medusa-react"
 import Link from "next/link"
 import ReactCountryFlag from "react-country-flag"
-
+import Image from "next/image"
 const MainMenu = () => {
   const { collections } = useCollections()
   const { customer } = useMeCustomer()
@@ -27,16 +27,28 @@ const MainMenu = () => {
     <div className="flex flex-col flex-1">
       <div className="flex items-center justify-between w-full border-b border-gray-200 py-4 px-6">
         <div className="flex-1 basis-0">
-          <button
+          {/* <button
             className="flex items-center gap-x-2"
             onClick={setScreenCountry}
-          >
-            <ReactCountryFlag countryCode={countryCode || "us"} svg />
-            <ChevronDown />
-          </button>
+          > */}
+            {/* <ReactCountryFlag countryCode={countryCode || "us"} svg /> */}
+            {/* <ChevronDown /> */}
+          {/* </button> */}
         </div>
         <div>
-          <h1 className="text-xl-semi uppercase">Acme</h1>
+        <Link href="/" className="text-xl-semi uppercase">
+            <Image
+              src="/fnLogo.png" 
+             alt="logo"
+            width={300}
+            height={300}
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+            />
+
+            </Link>
         </div>
         <div className="flex-1 basis-0 flex justify-end">
           <button onClick={close}>
@@ -97,7 +109,7 @@ const MainMenu = () => {
 
         <div className="flex flex-col">
           <div className="flex flex-col gap-y-8 text-small-regular">
-            {!customer ? (
+            {/* {!customer ? (
               <div className="flex flex-col gap-y-4">
                 <span className="text-gray-700 uppercase">Account</span>
                 <Link href={`/account/login`} passHref>
@@ -125,8 +137,8 @@ const MainMenu = () => {
                   </button>
                 </Link>
               </div>
-            )}
-            <div className="flex flex-col gap-y-4">
+            )} */}
+            {/* <div className="flex flex-col gap-y-4">
               <span className="text-gray-700 uppercase">Delivery</span>
               <button
                 className="flex items-center justify-between border-b border-gray-200 py-2"
@@ -144,7 +156,7 @@ const MainMenu = () => {
                 </div>
                 <ChevronDown className="-rotate-90" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

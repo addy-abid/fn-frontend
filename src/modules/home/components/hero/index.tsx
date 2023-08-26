@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="h-[90vh] w-full relative">
       <div className="text-white absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:text-left small:justify-end small:items-start small:p-32">
         <h1 className="text-2xl-semi mb-4 drop-shadow-md shadow-black">
-          Introducing the Latest Summer Styles
+          Introducing Mobile Pickup at Family Nutrition
         </h1>
         <p className="text-base-regular max-w-[32rem] mb-6 drop-shadow-md shadow-black">
           This season, our new summer collection embraces designs to provide
@@ -16,10 +16,10 @@ const Hero = () => {
         <UnderlineLink href="/store">Explore products</UnderlineLink>
       </div>
       <Image
-        src="/heroImg.jpg"
+        src="/render.jpg"
         loading="eager"
         priority={true}
-        quality={90}
+        quality={100}
         alt="Photo by @thevoncomplex https://unsplash.com/@thevoncomplex"
         className="absolute inset-0"
         draggable="false"

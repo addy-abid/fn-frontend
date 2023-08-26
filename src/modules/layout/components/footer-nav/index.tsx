@@ -4,7 +4,7 @@ import clsx from "clsx"
 import { useCollections } from "medusa-react"
 import Link from "next/link"
 import CountrySelect from "../country-select"
-
+import Image from "next/image"
 const FooterNav = () => {
   const { collections } = useCollections()
 
@@ -12,12 +12,24 @@ const FooterNav = () => {
     <div className="content-container flex flex-col gap-y-8 pt-16 pb-8">
       <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between">
         <div>
-          <Link href="/" className="text-xl-semi uppercase">
-            Acme
-          </Link>
+        <div className="flex items-center h-full">
+            <Link href="/" className="text-xl-semi uppercase">
+            <Image
+              src="/fnLogo.png" 
+             alt="logo"
+            width={200}
+            height={200}
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+            }}
+            />
+
+            </Link>
+          </div>
         </div>
         <div className="text-small-regular grid grid-cols-2 gap-x-16">
-          <div className="flex flex-col gap-y-2">
+          {/* <div className="flex flex-col gap-y-2">
             <span className="text-base-semi">Collections</span>
             <ul
               className={clsx("grid grid-cols-1 gap-y-2", {
@@ -30,9 +42,9 @@ const FooterNav = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
           <div className="flex flex-col gap-y-2">
-            <span className="text-base-semi">Medusa</span>
+            <span className="text-base-semi">Store Information</span>
             <ul className="grid grid-cols-1 gap-y-2">
               <li>
                 <a
@@ -67,11 +79,11 @@ const FooterNav = () => {
       </div>
       <div className="flex flex-col-reverse gap-y-4 justify-center xsmall:items-center xsmall:flex-row xsmall:items-end xsmall:justify-between">
         <span className="text-xsmall-regular text-gray-500">
-          © Copyright 2022 ACME
+          © Copyright 2023 Family Nutrition Inc
         </span>
-        <div className="min-w-[316px] flex xsmall:justify-end">
+        {/* <div className="min-w-[316px] flex xsmall:justify-end">
           <CountrySelect />
-        </div>
+        </div> */}
       </div>
     </div>
   )
