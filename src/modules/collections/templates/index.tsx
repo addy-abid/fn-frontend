@@ -17,7 +17,7 @@ type CollectionTemplateProps = {
   }
 }
 
-const BASEURL = process.env.NEXT_PUBLIC_BASE_URL
+const BASEURL = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:8000"
 
 const fetchCollectionProducts = async ({
   pageParam = 0,
