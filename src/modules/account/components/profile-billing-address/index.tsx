@@ -44,7 +44,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
       regions
         ?.map((region) => {
           return region.countries.map((country) => ({
-            value: country.iso_2,
+            value: 'us',
             label: country.display_name,
           }))
         })

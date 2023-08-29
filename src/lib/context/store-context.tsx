@@ -112,7 +112,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
     if (!IS_SERVER) {
       const { regionId, countryCode: defaultCountryCode } = getRegion() || {
         regionId: region.id,
-        countryCode: region.countries[0].iso_2,
+        countryCode: 'us',
       }
 
       const finalCountryCode = countryCode || defaultCountryCode

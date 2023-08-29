@@ -14,7 +14,7 @@ const useCountryOptions = () => {
     return regions
       ?.map((r) => {
         return r.countries.map((c) => ({
-          country: c.iso_2,
+          country: 'us',
           region: r.id,
           label: c.display_name,
         }))

@@ -269,17 +269,17 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   /**
    * Method that validates if the cart's region matches the shipping address's region. If not, it will update the cart region.
    */
-  const validateRegion = (countryCode: string) => {
-    if (regions && cart) {
-      const region = regions.find((r) =>
-        r.countries.map((c) => c.iso_2).includes(countryCode)
-      )
+  // const validateRegion = (countryCode: string) => {
+  //   if (regions && cart) {
+  //     const region = regions.find((r) =>
+  //       r.countries.map((c) => c.iso_2).includes(countryCode)
+  //     )
 
-      if (region && region.id !== cart.region.id) {
-        setRegion(region.id, countryCode)
-      }
-    }
-  }
+  //     if (region && region.id !== cart.region.id) {
+  //       setRegion(region.id, countryCode)
+  //     }
+  //   }
+  // }
 
   /**
    * Method that sets the addresses and email on the cart.

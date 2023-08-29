@@ -24,7 +24,7 @@ const CountrySelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
       }
 
       return currentRegion.countries.map((country) => ({
-        value: country.iso_2,
+        value: 'us',
         label: country.display_name,
       }))
     }, [regions, cart])
