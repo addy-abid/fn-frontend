@@ -13,23 +13,29 @@ async function getProducts(handle: string) {
       handle,
     },
   })
+  console.log('res: ', res);
 
   if (!res.ok) {
+    console.log('res not okay: ', res);
+
     notFound()
   }
 
+  console.log('res.body: ', res.body);
   return res.body
+
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { products } = await getProducts(params.handle)
+  console.log('products: ', products);
 
   if (!products.length) {
     notFound()
   }
 
   const product = products[0]
-
+  console.log('product: ', product);
   return {
     title: `${product.title} | Acme Store`,
     description: `${product.title}`,
