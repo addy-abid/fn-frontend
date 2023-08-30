@@ -9,11 +9,7 @@ module.exports = withStoreConfig({
   reactStrictMode: true,
   images: {
     domains: [
-      "medusa-public-images.s3.eu-west-1.amazonaws.com",
-      "localhost",
-      "medusa-server-testing.s3.amazonaws.com",
-      "http://192.168.0.27:9090",
-      "https://console-production-a283.up.railway.app",
+      "https://family-nutrition.s3.us-west-1.amazonaws.com",
       "https://fn-backend-production.up.railway.app",
       "https://fn-backend-production.up.railway.app/app",
       "https://fn-frontend.vercel.app"
